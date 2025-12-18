@@ -29,8 +29,9 @@ function Form(props) {
     }
 
     async function getData(data) {
-        const response = await axios.post('http://127.0.0.1:8000/generate/response',
-        data = data)
+        const response = await axios.post(
+        `${import.meta.env.VITE_API_BASE_URL}/generate/response`,
+        data)
         return response.data.content
         
     }

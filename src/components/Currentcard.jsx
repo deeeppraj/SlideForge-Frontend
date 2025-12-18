@@ -44,7 +44,7 @@ function Currentcard() {
       if (!title) return;
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/regenerate/img",
+        `${import.meta.env.VITE_API_BASE_URL}/regenerate/img`,
         { title }
       );
 
